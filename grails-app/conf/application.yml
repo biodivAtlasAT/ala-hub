@@ -5,10 +5,11 @@ grails:
         defaultPackage: au.org.ala.hub
     config:
         locations:
-            - classpath:plugin.groovy # biocache-hubs
+            # - classpath:plugin.groovy # biocache-hubs changed by ReWe
             - file:/data/ala-hub/config/ala-hub-config.properties
             - file:/data/ala-hub/config/ala-hub-config.yml
             - file:/data/ala-hub/config/ala-hub-config.groovy
+            - file:D:\\reinhardt\\firma\\Biodiversity\\working\\data\\ala-hub\\ala-hub-config.properties
     spring:
         transactionManagement:
             proxies: false
@@ -112,10 +113,12 @@ server:
 environments:
     development:
         grails:
-            serverURL: "https://devt.ala.org.au/ala-hub"
+            #serverURL: "http://127.0.0.1:8080/ala-hub"
+            serverURL: "http://127.0.0.1:8080"
         security:
             cas:
-                appServerName: "https://auth.ala.org.au"
+                #appServerName: "https://auth.ala.org.au"
+                appServerName: "http://127.0.0.1:8080"
     test:
         security:
             cas:

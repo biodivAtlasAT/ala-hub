@@ -13,7 +13,8 @@
 
 grails.project.groupId = "au.org.ala" // change this to alter the default package name and Maven publishing destination
 
-default_config = "/data/${appName}/config/${appName}-config.properties"
+//default_config = "/data/${appName}/config/${appName}-config.properties"
+default_config = "D:/reinhardt/firma/Biodiversity/working/data/ala-hub/ala-hub-config.properties"
 if(!grails.config.locations || !(grails.config.locations instanceof List)) {
     grails.config.locations = []
 }
@@ -25,7 +26,7 @@ if (new File(default_config).exists()) {
 }
 
 println "[${appName}] (*) grails.config.locations = ${grails.config.locations}"
-//println "default_config = ${default_config}"
+println "default_config = ${default_config}"
 
 /******************************************************************************\
  *  SKINNING
@@ -142,9 +143,10 @@ grails.hibernate.cache.queries = false
 
 environments {
     development {
-        serverName = 'http://dev.ala.org.au:8080'
-        grails.serverURL = 'http://dev.ala.org.au:8080/' + appName
-//        security.cas.appServerName = serverName
+        serverName = 'http://localhost:8080'
+        grails.serverURL = 'http://localhost:8080/' + appName
+        grails.security.cas.appServerName = 'https://biocache.biodiversityatlas.at'
+        appServerName = 'https://biocache.biodiversityatlas.at'
 //        security.cas.contextPath = "/${appName}"
           //grails.resources.debug = true // cache & resources plugins
     }
