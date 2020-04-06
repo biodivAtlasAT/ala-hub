@@ -100,7 +100,7 @@ dependencies {
 
     // ALA Plugins
     compile "org.grails.plugins:ala-auth:3.1.0", noCache
-    compile "org.grails.plugins:ala-bootstrap3:3.2.0", noCache
+    //compile "org.grails.plugins:ala-bootstrap3:3.2.0", noCache
     compile "org.grails.plugins:ala-admin-plugin:2.2", noCache
 
     if (!inplace) {
@@ -108,7 +108,7 @@ dependencies {
         //compile "au.org.ala.plugins.grails:biocache-hubs:2.1.5-SNAPSHOT", noCache
         compile "au.org.ala.plugins.grails:biocache-hubs:2.1.3-SNAPSHOT", noCache
         //compile fileTree(dir: 'D:\\reinhardt\\firma\\Biodiversity\\working\\extJars2', include: '*.jar')
-
+        compile "org.grails.plugins:ala-bootstrap3:3.2.1", noCache
         compile "au.org.ala.plugins.grails:downloads-plugin:2.0.9", noCache
     }
     //providedCompile files('D:\\reinhardt\\firma\\Biodiversity\\working\\data\\ala-hub\\ala-hub-config.properties')
